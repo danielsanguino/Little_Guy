@@ -48,3 +48,16 @@ Arduino set-up:
   6.) Compile and upload code
   7.) Attach USB-USB B cable to Pi 4B USB slot (any)
 
+
+Test Process:
+  1.) Connect Pi to ELEGOO using USB-USB B
+  2.) Connect Pi to battery pack using USB C - USB
+  3.) Connect ELEGOO to battery pack using supplied connector
+  4.) Connect Webcam to Pi USB port
+  5.) Place Robot on ground (or in water)
+  6.) Ensure Pi 4B is connected to internet
+  7.) Connect to Pi using Raspberry Pi Connect and select connect over shell
+  8.) Navigate to folder containing Little_Vision.py and best.pt
+  9.) Activate virtual enviroment with this command: source venv/bin/activate
+  10.) Activate code using this command: python3 Little_Vision.py
+  11.) Watch your bot follow fish
