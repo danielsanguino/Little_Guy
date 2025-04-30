@@ -36,7 +36,12 @@ Pi 4B set-up:
   10.) pip install requirements found in requirements.txt
   11.) Select Raspberry Pi logo in top left corner, select program, select Thonny
   12.) Make sure you're in regular mode in Thonny
-  13.) Select Tools in toolbar, navigate to options, 
+  13.) Select Tools in toolbar, navigate to options, Interpreter, browse, navigate to your venv folder, select bin, select Python3 and continue
+  14.) Save!
+  15.) Create a Pi connect account
+  16.) Open Pi options and enable Pi connect
+  17.) Log in on the Pi and add to your devices
+  18.) Ensure all dependencies are installed and run once in Thonny as a test
 
 Arduino set-up:
   1.) Download Arduino IDE
