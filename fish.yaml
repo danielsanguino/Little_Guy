@@ -1,0 +1,7 @@
+names:
+- fish
+nc: 1
+path: /work/pi_mchiovaro_uri_edu/Daniel_Sanguino/final_project/datasets
+test: test/images
+train: train/images
+val: valid/images
