@@ -53,6 +53,29 @@ Arduino set-up:
   6.) Compile and upload code
   7.) Attach USB-USB B cable to Pi 4B USB slot (any)
 
+Data Processing:
+  1.) Obtain the DeepFish Dataset or a comparable dataset of labeled fish images.
+  2.) Organzie the dataset into a YOLO-compatable directory structure:
+      a.) Create images/train, images/val, and images/test folders for the image data
+      b.) Create corresponding labels/train, labels/val, and labels/test folders for the annotation files.
+  3.) Ensure each image has a matching .txt label file with YOLO-format annotation.
+      Each line in a label file should follow the format:
+      (class_id, x_center, y_center, width, height) -- all normalized between 0 and 1.
+  4.) Resize all image files 416x416 pixels to match the YOLOv11 model's input requirement
+  5.) Split the dataset into approximately 80% training, 10% validation, and 10% testing subsets.
+
+Model Training:
+  1.) Clone the YOLOv11 repository from the official GitHub source.
+  2.) Create a data.yaml file describing the dataset. This file should include:
+      a.) The paths to the training and validation image folders.
+      b.)The number of object classes (nc) in the dataset.
+      c.)A list of class names, in this case: ['fish'].
+
+  3.) Select or customize the YOLOv11 configuration file. The Tiny variant of YOLOv11 is recommended for low-power devices like the Raspberry Pi.
+  4.) Set up a Python virtual environment and install all required dependencies as specified in the project's requirements.txt file.
+  5.) Launch the training process using the YOLOv11 training script with specified parameters such as input size, batch size, number of epochs, dataset config file, and model config file.
+  6.) Upon completion, the trained model weights, including the best-performing checkpoint, will be saved in the runs/train/ directory.
+  7.) Transfer the final best.pt model file to the Raspberry Pi to enable live inference on the robot.
 
 Test Process:
   1.) Connect Pi to ELEGOO using USB-USB B
